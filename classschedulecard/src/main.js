@@ -17,7 +17,7 @@ import Foo from "./components/Foo.vue";
 // 我们晚点再讨论嵌套路由。
 const routes = [
   { path: '/foo', component: Foo },
-  { path: '/helloworld', component: HelloWorld }
+  { path: '/helloworld/:msg', component: HelloWorld, props: true  }
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置
