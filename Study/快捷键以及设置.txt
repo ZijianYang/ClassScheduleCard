@@ -1,0 +1,1 @@
+你可以按下 “Option + Shift + F” （Windows 上是 Alt + Shift + F）来对整个文档进行格式化

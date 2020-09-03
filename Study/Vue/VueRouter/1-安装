@@ -1,0 +1,2 @@
+npm install --save vue-router
+npm install --save bootstrap bootstrap/dist/css/bootstrap.min.css bootstrap/dist/js/bootstrap.min.js vue-router
