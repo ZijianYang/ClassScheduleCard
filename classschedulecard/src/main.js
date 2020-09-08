@@ -1,6 +1,7 @@
 import Vue from 'vue'
 
 import router from './router.js'
+import store from './store'
 
 import 'bootstrap'
 //import $ from 'jquery'
@@ -12,5 +13,6 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store
 }).$mount('#app')
