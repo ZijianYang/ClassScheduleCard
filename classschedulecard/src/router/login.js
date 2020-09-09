@@ -8,7 +8,7 @@ export default [
   },
   {
     // 注册页
-    path: '/login/register',
+    path: '/register',
     name: 'register',
     component: () => import('@/components/login/Register')
   }
