@@ -1,17 +1,15 @@
 export default [
   {
     // 主登录页
-    path: '/login',
+    path: '/login/:redirect',
     name: 'login',
-    component: () => import('@/components/login/Login')
+    component: () => import('@/components/login/Login'),
+    props: true
   },
   {
     // 注册页
     path: '/login/register',
     name: 'register',
-    meta: {
-      keepAlive: true
-    },
     component: () => import('@/components/login/Register')
   }
 ] 

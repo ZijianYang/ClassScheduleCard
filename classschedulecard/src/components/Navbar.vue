@@ -16,13 +16,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <router-link to="/helloworld/Welcome to Your Vue.js App" class="nav-link">
+          <router-link to="/" class="nav-link">
             Home
             <span class="sr-only">(current)</span>
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/foo" class="nav-link">Go to Foo</router-link>
+          <router-link to="/account" class="nav-link">account</router-link>
         </li>
         <li class="nav-item dropdown">
           <a

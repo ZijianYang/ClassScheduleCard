@@ -1,16 +1,11 @@
 <template>
   <div>
-    Login
-    <br/>
-    <router-link :to="{ name: redirect}">继续</router-link>
+    Account
   </div>
 </template>
 
 <script>
-export default {
-  name: "Login",
-  props: ['redirect'],
-};
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
