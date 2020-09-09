@@ -1,6 +1,6 @@
 <template>
   <div>
-    Foo
+    Register
   </div>
 </template>
 
