@@ -17,8 +17,8 @@
           </div>
           <div class="form-group">
             <label for="password">图片验证码</label>
-            <img v-bind:src="src" />
             <input type="text" class="form-control" id="imageCode" placeholder="图片验证码" />
+            <img v-bind:src="src" v-on:click="ImageCode()"/>
           </div>
           <button type="submit" class="btn btn-default">注册</button>
         </form>
@@ -46,16 +46,21 @@ export default {
       return this.$store.getters.GetToken();
     },
   },
-  methods:{
-    ImageCode:()=>{
-    //   var self=this;
-    //   self.$ajax.post(
-    //       token:self.Token
-    //     )
-    //   ).then(function(res){
-    //     self.src=res.data.Data;
-    //   }).catch();
-    }
+  methods: {
+    ImageCode: function () {
+      var self = this;
+      this.$ajax({
+        method: "post",
+        data: {
+          token: this.$store.state.auth.Token,
+        },
+        url: this.$store.state.basic.ApiUrl + "api/Token/ImgCode",
+      })
+        .then(function (res) {
+          self.src = "data:image/png;base64," + res.data.Data;
+        })
+        .catch();
+    },
   },
   mounted: function () {
     let avaiHeight = document.documentElement.clientHeight;
