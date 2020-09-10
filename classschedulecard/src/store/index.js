@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import cart from './modules/cart'
+import basic from './modules/basic'
+import auth from './modules/auth'
 // import products from './modules/products'
 
 Vue.use(Vuex)
@@ -15,11 +16,12 @@ export default new Vuex.Store({
         increment(state) {
             state.count++
         }
-    }
-    //   modules: {
-    //     cart,
-    //     products
-    //   },
+    },
+
+    modules: {
+        basic:basic,
+        auth:auth,
+    },
     //   strict: debug,
     //   plugins: debug ? [createLogger()] : []
 })

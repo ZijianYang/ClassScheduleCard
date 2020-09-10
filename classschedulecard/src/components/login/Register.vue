@@ -17,7 +17,7 @@
           </div>
           <div class="form-group">
             <label for="password">图片验证码</label>
-             <img src=''/>
+            <img v-bind:src="src" />
             <input type="text" class="form-control" id="imageCode" placeholder="图片验证码" />
           </div>
           <button type="submit" class="btn btn-default">注册</button>
@@ -28,27 +28,39 @@
       </div>
     </div>
   </div>
-
-  <!-- <div>
-    Login
-    <br/>
-    <router-link :to="{ name: redirect}">继续</router-link>
-  </div>-->
 </template>
 
 <script>
 export default {
-  name: "Register",
+  name: "Login",
   data: function () {
     return {
       styleContainer: {
         height: "100%",
       },
+      src: "",
     };
+  },
+  computed: {
+    Token() {
+      return this.$store.getters.GetToken();
+    },
+  },
+  methods:{
+    ImageCode:()=>{
+    //   var self=this;
+    //   self.$ajax.post(
+    //       token:self.Token
+    //     )
+    //   ).then(function(res){
+    //     self.src=res.data.Data;
+    //   }).catch();
+    }
   },
   mounted: function () {
     let avaiHeight = document.documentElement.clientHeight;
     if (avaiHeight > 600) this.styleContainer.height = avaiHeight + "px";
+    this.ImageCode();
   },
 };
 </script>

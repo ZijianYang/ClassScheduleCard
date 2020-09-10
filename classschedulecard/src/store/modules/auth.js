@@ -1,23 +1,25 @@
 // initial state
 const state = () => ({
   Token: '',
-  IsLogin:false,
+  IsLogin: false,
 })
 
 // getters
-const getters = {  
+const getters = {
 }
 
 // actions
-const actions = {  
+const actions = {
+
+
 }
 
 // mutations
 const mutations = {
-  setCartItems (state, { token }) {
-    state.Token = token
+  setToken(state, payload ) {
+    state.Token = payload.Token;
   },
-  setIsLogin (state, { isLogin }) {
+  setIsLogin(state, { isLogin }) {
     state.IsLogin = isLogin
   }
 }
